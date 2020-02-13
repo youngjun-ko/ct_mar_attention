@@ -20,7 +20,11 @@ Prepare your data in following form:
 * ```Data format```: 'NHWC' (number, height, width, and channel of the input data, respectively)
 
 ## Citation
-
+Please cite our study as follow:
+```
+@article{
+}
+```
 
 ## Contact
 E-mail: youngjun.ko@yonsei.ac.kr

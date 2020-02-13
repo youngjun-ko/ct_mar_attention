@@ -9,13 +9,15 @@ To utilize our code, you need to install followings on your system:
 * [Tensorflow](https://www.tensorflow.org/) 
 
 ## Usage
-Clone this repository by following:
+To download our code, clone this repository as follow:
 ```
 git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
-* Data type: '.npy'
-* Data format: 'NHWC'
+
+Prepare your data in following form:
+* Data type: '.npy' (numpy array)
+* Data format: 'NHWC' (number, height, width, and channel of the input data, respectively)
 
 ## Citation
 

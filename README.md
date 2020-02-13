@@ -20,7 +20,7 @@ Prepare your data in following form:
 * ```Data format```: 'NHWC' (in CT image, usually C = 1)
 
 ## Citation
-Please cite our study as follow:
+Please cite our work as follow:
 ```
 @article{
 }

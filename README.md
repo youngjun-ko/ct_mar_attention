@@ -17,7 +17,7 @@ cd ct_mar_attention
 
 Prepare your data in following form:
 * ```Data type```: '.npy' (numpy array)
-* ```Data format```: 'NHWC' (number, height, width, and channel of the input data, respectively)
+* ```Data format```: 'NHWC' (in CT image, usually C = 1)
 
 ## Citation
 Please cite our study as follow:

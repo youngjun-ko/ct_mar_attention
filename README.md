@@ -14,6 +14,7 @@ Clone this repository by following:
 git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
-Default data type is 'NHWC'.
+* Data type: '.npy'
+* Data format: 'NHWC'
 
 ## Citation

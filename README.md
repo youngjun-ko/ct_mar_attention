@@ -16,8 +16,8 @@ cd ct_mar_attention
 ```
 
 Prepare your data in following form:
-* Data type: '.npy' (numpy array)
-* Data format: 'NHWC' (number, height, width, and channel of the input data, respectively)
+* ```Data type```: '.npy' (numpy array)
+* ```Data format```: 'NHWC' (number, height, width, and channel of the input data, respectively)
 
 ## Citation
 

@@ -10,10 +10,10 @@ To utilize our code, you need to install followings on your system:
 
 ## Usage
 Clone this repository by following:
-'''
+```
 git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
-'''
+```
 Default data type is 'NHWC'.
 
 ## Citation

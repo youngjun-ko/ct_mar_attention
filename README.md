@@ -18,3 +18,8 @@ cd ct_mar_attention
 * Data format: 'NHWC'
 
 ## Citation
+
+
+## Contact
+E-mail: youngjun.ko@yonsei.ac.kr
+Office: Jinri C #428, Yonsei University, 85, Songdogwahak-ro, Yeonsu-gu, Incheon, Korea

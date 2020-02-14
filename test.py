@@ -10,7 +10,7 @@ from models import *
 
 task = 'FBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
 
-test_file = np.load('./data/%s_test.npy' % category)
+test_file = np.load('./data/%s_test.npy' % task)
 
 test_epoch = 100  # test epoch. [100]
 
@@ -34,7 +34,7 @@ with tf.Session() as sess:
     loss_l1 = 1e2 * tf.reduce_mean(abs(deblur_output - target_ph))  # L1 loss
 
     # VGG loss
-    loss_vgg = tf.zeros(batch_size, tf.float32)
+    loss_vgg = tf.zeros(1, tf.float32)
     target_resize = convert_tensor(target_ph)
     vgg_t = vgg16.Vgg16()
     vgg_t.build(target_resize)

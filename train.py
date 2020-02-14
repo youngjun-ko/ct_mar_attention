@@ -81,7 +81,7 @@ with tf.Session() as sess:
 
             if not (train_index + 1) % (nTrain/10):
                 print("Epoch:[%3d/%d] Batch:[%5d/%5d] - Loss:[%4.4f] L1:[%4.4f] VGG:[%4.4f]"
-                      % (epoch, nEpoch, (train_index+1), nTrain, loss_, l1_, vgg_))
+                      % (epoch, end_Epoch, (train_index+1), nTrain, loss_, l1_, vgg_))
 
         epoch += 1
         saver.save(sess, "%s/model.ckpt" % model_path)

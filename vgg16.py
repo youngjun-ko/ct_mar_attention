@@ -17,7 +17,6 @@ class Vgg16:
             print(path)
 
         self.data_dict = np.load(vgg16_npy_path, encoding='latin1').item()
-        print("vgg16.npy file loaded")
 
     def build(self, rgb):
         """

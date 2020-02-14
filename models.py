@@ -38,8 +38,8 @@ def AttBlock(inputs, scope='attblock'):
 
 def network(inputs):
     with tf.variable_scope('deblur'):
-        net = tf.layers.conv2d(inputs, 64, 5, padding=padding, kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0', use_bias=False)
+        net = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0', use_bias=False)
         for i in range(10):
             net = AttBlock(net, scope='attblock' + str(i))
-        outputs = tf.layers.conv2d(net, 1, 5, padding=padding, kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0', use_bias=False)
+        outputs = tf.layers.conv2d(net, 1, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv1', use_bias=False)
     return outputs

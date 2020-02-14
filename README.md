@@ -9,6 +9,7 @@ To utilize our code, you need to install followings on your system:
 * [Tensorflow](https://www.tensorflow.org/) 
 
 ## Usage
+# Download our code
 To download our code, clone this repository as follow:
 ```
 git clone https://github.com/youngjun-ko/ct_mar_attention

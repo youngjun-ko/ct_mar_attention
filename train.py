@@ -86,7 +86,7 @@ with tf.Session() as sess:
         epoch += 1
         saver.save(sess, "%s/model.ckpt" % model_path)
 
-        if epoch == nEpoch:
+        if epoch == end_Epoch:
             break
 
     print('* Training Finished!')

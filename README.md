@@ -20,9 +20,9 @@ Our dataset and trained models can download here:
 
 
 Prepare your data in following form:
-* ```Data folder```: './data'  # you must include 'vgg16.npy' in the folder
-* ```Data type```: '.npy'  # numpy array
-* ```Data format```: 'NHWC'  # number, height, width and channel of your CT image
+* ```folder name```: './data'  ```# you must include 'vgg16.npy' in the folder```
+* ```file format```: '.npy'  ```# numpy array```
+* ```data format```: 'NHWC'  ```# number, height, width and channel of your CT image```
 
 ## Citation
 Please cite our work as follow:

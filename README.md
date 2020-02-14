@@ -15,7 +15,12 @@ git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
 
+
+Our dataset and trained models can download here:
+
+
 Prepare your data in following form:
+* ```Data Location```: './data'
 * ```Data type```: '.npy' (numpy array)
 * ```Data format```: 'NHWC' (in CT image, usually C = 1)
 

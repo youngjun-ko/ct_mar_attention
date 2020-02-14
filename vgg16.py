@@ -9,7 +9,7 @@ VGG_MEAN = [103.939, 116.779, 123.68]
 
 
 class Vgg16:
-    def __init__(self, vgg16_npy_path='/home/yj/Documents/TMI2019/Data/vgg16.npy'):
+    def __init__(self, vgg16_npy_path='./data/vgg16.npy'):
         if vgg16_npy_path is None:
             path = inspect.getfile(Vgg16)
             path = os.path.abspath(os.path.join(path, os.pardir))

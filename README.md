@@ -33,12 +33,14 @@ python test.py
 * ```file format```: '.npy' (numpy array)
 * ```data format```: 'NHWC'
 
+```
 % ## Citation
 % Please cite our work as follow:
 % ```
 % @article{
 % }
 % ```
+```
 
 ## Contact
 E-mail: youngjun.ko@yonsei.ac.kr

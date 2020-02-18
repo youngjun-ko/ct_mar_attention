@@ -11,9 +11,9 @@ def convert_tensor(tensor):
 
 # def ResBlock(inputs, scope='resblock'):
 #     with tf.variable_scope(scope):
-#         outputs = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='_conv0')
+#         outputs = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0')
 #         outputs = tf.nn.relu(outputs)
-#         outputs = tf.layers.conv2d(outputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='_conv1')
+#         outputs = tf.layers.conv2d(outputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv1')
 #         outputs = inputs + outputs
 #     return outputs
 

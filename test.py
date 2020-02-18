@@ -12,8 +12,6 @@ task = 'FBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
 
 test_file = np.load('./data/%s_test.npy' % task)
 
-test_epoch = 100  # test epoch. [100]
-
 
 # Testing --------------------------------------------------------------------------------------------------------------
 

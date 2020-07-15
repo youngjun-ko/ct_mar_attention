@@ -28,7 +28,7 @@ def global_average_pooling(inputs):
 
 
 def global_max_pooling(inputs):
-    max_pool = tf.reduce_mean(inputs, axis=[1, 2])
+    max_pool = tf.reduce_max(inputs, axis=[1, 2])
     max_pool = tf.expand_dims(max_pool, 1)
     max_pool = tf.expand_dims(max_pool, 1)
     max_pool = tf.sigmoid(max_pool)

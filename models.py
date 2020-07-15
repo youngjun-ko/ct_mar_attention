@@ -22,6 +22,7 @@ def global_average_pooling(inputs):
     avg_pool = tf.reduce_mean(inputs, axis=[1, 2])
     avg_pool = tf.expand_dims(avg_pool, 1)
     avg_pool = tf.expand_dims(avg_pool, 1)
+    avg_pool = tf.sigmoid(avg_pool)
     outputs = tf.multiply(inputs, avg_pool)
     return outputs
 

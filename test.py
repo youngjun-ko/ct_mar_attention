@@ -26,7 +26,7 @@ with tf.Session() as sess:
     target_ph = tf.placeholder(tf.float32, shape=[None, None, None, 1])
 
     # Deblur with network
-    deblur_output = network(input_ph)
+    deblur_output = network(input_ph, task)
 
     # L1 loss
     loss_l1 = 1e2 * tf.reduce_mean(abs(deblur_output - target_ph))  # L1 loss

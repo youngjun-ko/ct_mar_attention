@@ -27,24 +27,12 @@ def global_average_pooling(inputs):
     return outputs
 
 
-def global_max_pooling(inputs):
-    max_pool = tf.reduce_max(inputs, axis=[1, 2])
-    max_pool = tf.expand_dims(max_pool, 1)
-    max_pool = tf.expand_dims(max_pool, 1)
-    max_pool = tf.sigmoid(max_pool)
-    outputs = tf.multiply(inputs, max_pool)
-    return outputs
-
-
 def AttBlock(inputs, task, scope='attblock'):
     with tf.variable_scope(scope):
         outputs = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0')
         outputs = tf.nn.relu(outputs)
         outputs = tf.layers.conv2d(outputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv1')
-        if task == 'Chest':
-            outputs = global_average_pooling(outputs)
-        else:
-            outputs = global_max_pooling(outputs)
+        outputs = global_average_pooling(outputs)
         outputs = inputs + outputs
     return outputs
 

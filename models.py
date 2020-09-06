@@ -27,7 +27,7 @@ def global_average_pooling(inputs):
     return outputs
 
 
-def AttBlock(inputs, task, scope='attblock'):
+def AttBlock(inputs, scope='attblock'):
     with tf.variable_scope(scope):
         outputs = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0')
         outputs = tf.nn.relu(outputs)
@@ -37,11 +37,11 @@ def AttBlock(inputs, task, scope='attblock'):
     return outputs
 
 
-def network(inputs, task):
+def network(inputs):
     with tf.variable_scope('deblur'):
         net = tf.layers.conv2d(inputs, 64, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv0')
         for i in range(10):
-            net = AttBlock(net, task, scope='attblock' + str(i))
+            net = AttBlock(net, scope='attblock' + str(i))
 #             net = ResBlock(net, scope='resblock' + str(i))
         outputs = tf.layers.conv2d(net, 1, 5, padding='same', kernel_initializer=tf.contrib.layers.xavier_initializer(), name='conv1')
     return outputs

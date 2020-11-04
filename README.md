@@ -30,17 +30,17 @@ git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
 
-**Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)   
+* **Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)   
 
-Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
+* Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
 
 Prepare your data in following form:
 
-  * ```Folder name```: './data'
-    
-  * ```File format```: '.npy' (numpy array)
-    
-  * ```Data format```: 'NHWC'
+  ```
+  Folder name: './data'
+  File format: '.npy' (numpy array)
+  Data format: 'NHWC'
+  ```
 
 ## Usage
 To train and test our network, run:

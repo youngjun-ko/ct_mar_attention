@@ -1,4 +1,4 @@
-## Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module
+# Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module
 
 <p align="center"><img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png"></p>
 
@@ -19,11 +19,11 @@ If you find our work useful, please cite us:
 ```
 
 
-### Dependencies
+## Dependencies
 To utilize our code, make sure you have installed [Python](https://www.python.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
 
 
-### Preparation
+## Preparation
 To download our code, clone this repository as follow:
 ```
 git clone https://github.com/youngjun-ko/ct_mar_attention
@@ -39,12 +39,12 @@ Prepare your data in following form:
 * ```file format```: '.npy' (numpy array)
 * ```data format```: 'NHWC'
 
-### Usage
+## Usage
 To train and test our network, run:
 ```
 python train.py
 python test.py
 ```   
 
-### Contact
+## Contact
 E-mail: youngjun.ko@yonsei.ac.kr

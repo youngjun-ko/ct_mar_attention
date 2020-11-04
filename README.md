@@ -30,10 +30,8 @@ git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
 
-### **Download our Dataset and Pre-trained models**   
-Our dataset and trained models can download [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)   
+Download our **Dataset** and **Pre-trained models** [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)   
 
-### **Pre-trained VGG model**   
 Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
 
 ### **Prepare your data in following form:**   

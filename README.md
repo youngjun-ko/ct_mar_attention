@@ -35,11 +35,9 @@ Download **our dataset** and **pre-trained models** [here](https://drive.google.
 Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
 
 Prepare your data in following form:
-```
 * ```folder name```: './data'
 * ```file format```: '.npy' (numpy array)
 * ```data format```: 'NHWC'
-```
 
 ## Usage
 To train and test our network, run:

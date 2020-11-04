@@ -1,8 +1,21 @@
 # Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module
-This repository offers the data and code introduced in the paper:
-["Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module"](https://doi.org/10.1016/j.media.2020.101883).
 
 <img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
+
+This repository offers the data and code introduced in the following paper:
+
+["Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module"](https://doi.org/10.1016/j.media.2020.101883).
+
+```
+@article{ko2020rigid,
+  title={Rigid and non-rigid motion artifact reduction in X-ray CT using attention module},
+  author={Ko, Youngjun and Moon, Seunghyuk and Baek, Jongduk and Shim, Hyunjung},
+  journal={Medical Image Analysis},
+  pages={101883},
+  year={2020},
+  publisher={Elsevier}
+}
+```
 
 ## Dependencies
 To utilize our code, you need to install followings on your system:

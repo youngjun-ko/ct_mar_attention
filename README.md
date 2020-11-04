@@ -1,6 +1,6 @@
 ## Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module
 
-<img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
+<p align="center"><img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png"></p>
 
 This repository offers the data and code introduced in the following paper:
 

@@ -1,29 +1,19 @@
 ## Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module
 
-<img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
-
 This repository offers the data and code introduced in the following paper:
 
 ["Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module"](https://doi.org/10.1016/j.media.2020.101883).
 
-```
-@article{ko2020rigid,
-  title={Rigid and non-rigid motion artifact reduction in X-ray CT using attention module},
-  author={Ko, Youngjun and Moon, Seunghyuk and Baek, Jongduk and Shim, Hyunjung},
-  journal={Medical Image Analysis},
-  pages={101883},
-  year={2020},
-  publisher={Elsevier}
-}
-```
+<img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
 
-## Dependencies
+
+### Installation
 To utilize our code, you need to install followings on your system:
 * [Python](https://www.python.org/)
 * [Numpy](https://numpy.org/)
 * [Tensorflow](https://www.tensorflow.org/) 
 
-## Preparation
+### Preparation
 To download our code, clone this repository as follow:
 ```
 git clone https://github.com/youngjun-ko/ct_mar_attention
@@ -39,12 +29,25 @@ Prepare your data in following form:
 * ```file format```: '.npy' (numpy array)
 * ```data format```: 'NHWC'
 
-## Usage
+### Usage
 To train and test our network, run:
 ```
 python train.py
 python test.py
 ```   
 
-## Contact
+### Citation
+
+```
+@article{ko2020rigid,
+  title={Rigid and non-rigid motion artifact reduction in X-ray CT using attention module},
+  author={Ko, Youngjun and Moon, Seunghyuk and Baek, Jongduk and Shim, Hyunjung},
+  journal={Medical Image Analysis},
+  pages={101883},
+  year={2020},
+  publisher={Elsevier}
+}
+```
+
+### Contact
 E-mail: youngjun.ko@yonsei.ac.kr

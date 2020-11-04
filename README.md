@@ -2,7 +2,7 @@
 This repository offers the data and code introduced in the paper:
 ["Rigid and Non-rigid Motion Artifacts Reduction in X-ray CT using Attention Module"](https://doi.org/10.1016/j.media.2020.101883).
 
-<img width="1000" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
+<img width="800" src="https://user-images.githubusercontent.com/58386956/98059090-9ab77800-1e89-11eb-852f-2b285c72af59.png">
 
 ## Dependencies
 To utilize our code, you need to install followings on your system:

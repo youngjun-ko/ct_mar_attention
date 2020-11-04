@@ -8,7 +8,7 @@ This repository offers the data and code introduced in the following paper:
 
 
 ### Installation
-To utilize our code, make sure you have installed [Python](https://www.python.org/), [Numpy](https://numpy.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
+To utilize our code, make sure you have installed [Python](https://www.python.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
 
 
 ### Preparation

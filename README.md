@@ -36,12 +36,13 @@ Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa
 
 Prepare your data in following form:
 
-  * ```folder name```: './data'
+```
+  * **Folder name**: './data'
     
-  * ```file format```: '.npy' (numpy array)
+  * **File format**: '.npy' (numpy array)
     
-  * ```data format```: 'NHWC'
-    
+  * **Data format**: 'NHWC'
+```    
 
 ## Usage
 To train and test our network, run:

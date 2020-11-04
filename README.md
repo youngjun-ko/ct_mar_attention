@@ -8,10 +8,8 @@ This repository offers the data and code introduced in the following paper:
 
 
 ### Installation
-To utilize our code, you need to install followings on your system:
-* [Python](https://www.python.org/)
-* [Numpy](https://numpy.org/)
-* [Tensorflow](https://www.tensorflow.org/) 
+To utilize our code, make sure you have installed [Python](https://www.python.org/), [Numpy](https://numpy.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
+
 
 ### Preparation
 To download our code, clone this repository as follow:

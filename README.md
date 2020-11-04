@@ -36,11 +36,11 @@ Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa
 
 Prepare your data in following form:
 
-    * ```folder name```: './data'
+  * ```folder name```: './data'
     
-    * ```file format```: '.npy' (numpy array)
+  * ```file format```: '.npy' (numpy array)
     
-    * ```data format```: 'NHWC'
+  * ```data format```: 'NHWC'
     
 
 ## Usage

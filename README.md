@@ -9,6 +9,7 @@ This repository offers the data and code introduced in the following paper:
 
 ## Dependencies
 To utilize our code, make sure you have installed [Python](https://www.python.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
+
 In our experiments, python2.7 and tensorflow1.8 have been used.
 
 

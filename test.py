@@ -1,4 +1,5 @@
 import os
+import cv2
 import vgg16
 import random
 import numpy as np
@@ -8,51 +9,44 @@ from models import *
 
 # Task Settings --------------------------------------------------------------------------------------------------------
 
-task = 'FBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
+task = 'CBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
 
 test_file = np.load('./data/%s_test.npy' % task)
+gt_file = np.load('./data/%s_gt.npy' % task)
 
 
 # Testing --------------------------------------------------------------------------------------------------------------
 
 model_path = 'log/%s' % task
-if not os.path.isdir(model_path):
-    os.makedirs(model_path)
+result_path = 'result/%s' % task
+if not os.path.isdir(result_path):
+    os.makedirs(result_path)
+
+
+def compute_mse(img1, img2):
+    mse_ = ((img1 - img2) ** 2).mean()
+    return mse_
+
+
+def compute_rmse(img1, img2):
+    mse_ = compute_mse(img1, img2)
+    rmse_ = np.sqrt(mse_)
+    return rmse_
+
+
+def compute_psnr(img1, img2):
+    mse_ = compute_mse(img1, img2)
+    psnr_ = 10 * np.log10((1.0 ** 2) / mse_)
+    return psnr_
+
 
 with tf.Session() as sess:
 
-    # Placeholders
     input_ph = tf.placeholder(tf.float32, shape=[None, None, None, 1])
-    target_ph = tf.placeholder(tf.float32, shape=[None, None, None, 1])
-
-    # Deblur with network
     deblur_output = network(input_ph)
-
-    # L1 loss
-    loss_l1 = 1e2 * tf.reduce_mean(abs(deblur_output - target_ph))  # L1 loss
-
-    # VGG loss
-    loss_vgg = tf.zeros(1, tf.float32)
-    target_resize = convert_tensor(target_ph)
-    vgg_t = vgg16.Vgg16()
-    vgg_t.build(target_resize)
-
-    target_feature = [vgg_t.conv3_3, vgg_t.conv4_3]
-    output_resize = convert_tensor(deblur_output)
-    vgg_o = vgg16.Vgg16()
-    vgg_o.build(output_resize)
-
-    output_feature = [vgg_o.conv3_3, vgg_o.conv4_3]
-    for f, f_ in zip(output_feature, target_feature):
-        loss_vgg += 5*1e-5 * tf.reduce_mean(tf.subtract(f, f_) ** 2, [1, 2, 3])  # Perceptual(vgg) loss
-
-    # Total loss & Optimizer
-    loss = loss_l1 + loss_vgg
-    opt = tf.train.AdamOptimizer(learning_rate=5*1e-5).minimize(loss, var_list=tf.trainable_variables())
 
     saver = tf.train.Saver(max_to_keep=100)
     sess.run(tf.global_variables_initializer())
-
     ckpt = tf.train.get_checkpoint_state(checkpoint_dir='%s' % model_path)
 
     if ckpt:
@@ -60,15 +54,39 @@ with tf.Session() as sess:
         print('* Testing model loaded: ' + ckpt.model_checkpoint_path)
 
         test_npy = np.zeros([test_file.shape[0], test_file.shape[1], test_file.shape[2], test_file.shape[3]])
-        test_npy_name = ('./%s_result.npy' % task)
+        test_npy_name = ('%s/%s_result.npy' % (result_path, task))
+        original_psnr = 0
+        original_rmse = 0
+        deblur_psnr = 0
+        deblur_rmse = 0
 
         for test_index in range(test_file.shape[0]):
             test_input = test_file[test_index:test_index+1, :, :, :]
+            gt_slice = gt_file[test_index:test_index+1, :, :, :]
             test_output = sess.run([deblur_output], feed_dict={input_ph: test_input})
             test_result = test_output[0][0]
             test_npy[test_index, :, :, :] = test_result
+            # saving as png image
+            test_img = test_result - test_result.min()
+            test_img *= (255/test_img.max())
+            cv2.imwrite('%s/%d.png' % (result_path, test_index+1), test_img)
 
+            # computing psnr, rmse
+            original_psnr += compute_psnr(gt_slice, test_input)
+            original_rmse += compute_rmse(gt_slice, test_input)
+            deblur_psnr += compute_psnr(gt_slice, test_result)
+            deblur_rmse += compute_rmse(gt_slice, test_result)
+
+        # saving as npy file
         np.save(test_npy_name, test_npy)
+
+        original_psnr /= test_file.shape[0]
+        original_rmse /= test_file.shape[0]
+        deblur_psnr /= test_file.shape[0]
+        deblur_rmse /= test_file.shape[0]
+
+        print('[Original]\nPSNR avg: %f\nRMSE avg: %f' % (original_psnr, original_rmse))
+        print('[Proposed]\nPSNR avg: %f\nRMSE avg: %f' % (deblur_psnr, deblur_rmse))
         print('* Testing has been finished.')
 
     else:

@@ -8,13 +8,13 @@ from models import *
 
 # Task Settings --------------------------------------------------------------------------------------------------------
 
-task = 'FBCT_Teeth'
+task = 'FBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
 
 train_file = np.load('./data/%s_train.npy' % task)
 target_file = np.load('./data/%s_target.npy' % task)
 
 start_epoch = 0  # starting epoch. [0]
-end_Epoch = 100  # last epoch. [100]
+end_Epoch = 100  # last epoch. [100/50 for Teeth/Chest]
 
 
 # Training -------------------------------------------------------------------------------------------------------------

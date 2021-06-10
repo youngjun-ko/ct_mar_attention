@@ -9,6 +9,7 @@ This repository offers the data and code introduced in the following paper:
 
 ## Dependencies
 To utilize our code, make sure you have installed [Python](https://www.python.org/) and [Tensorflow](https://www.tensorflow.org/) on your system.
+In our experiments, python2.7 and tensorflow1.8 have been used.
 
 
 ## Preparation
@@ -18,7 +19,7 @@ git clone https://github.com/youngjun-ko/ct_mar_attention
 cd ct_mar_attention
 ```
 
-* **Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)   
+* **Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing) (updated at 2021.06.10)
 
 * Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
 

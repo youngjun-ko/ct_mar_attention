@@ -9,7 +9,7 @@ from models import *
 
 # Task Settings --------------------------------------------------------------------------------------------------------
 
-task = 'CBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
+task = 'FBCT_Teeth'  # FBCT_Teeth, CBCT_Teeth, Chest
 
 test_file = np.load('./data/%s_test.npy' % task)
 gt_file = np.load('./data/%s_gt.npy' % task)

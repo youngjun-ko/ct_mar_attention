@@ -28,7 +28,7 @@ Prepare your data in following form:
   Data format: 'NHWC'
   ```
 
-* **Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/1L0Mm8XM7_3oao3eXqNib03FZRYLceKjM?usp=sharing)
+* **Our dataset** and **pre-trained models** can be downloaded from [here](https://drive.google.com/drive/folders/19vV5JpegyFUSPuqhgEWV0OPMeGp50a-l?usp=sharing)
 
 * Pre-trained VGG model can be downloaded from [here](https://github.com/machrisaa/tensorflow-vgg)   
 

@@ -46,12 +46,13 @@ python test.py
 ## Citation
 If you find our work useful, please cite us:
 ```
-@article{ko2020rigid,
+@article{ko2021rigid,
   title={Rigid and non-rigid motion artifact reduction in X-ray CT using attention module},
   author={Ko, Youngjun and Moon, Seunghyuk and Baek, Jongduk and Shim, Hyunjung},
   journal={Medical Image Analysis},
+  volume={67},
   pages={101883},
-  year={2020},
+  year={2021},
   publisher={Elsevier}
 }
 ```
